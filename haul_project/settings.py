@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-n-@py73mojdp3(t4_5y*gw01fj0s-ww=(zv0gt#ym5k_67)=74
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,8 +77,14 @@ WSGI_APPLICATION = "haul_project.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        # "ENGINE": "django.db.backends.sqlite3",
+        # "NAME": BASE_DIR / "db.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'haul',
+        'USER': 'jon',
+        'PASSWORD': 'nocojones',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
